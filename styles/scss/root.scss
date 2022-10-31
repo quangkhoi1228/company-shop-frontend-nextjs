@@ -1,0 +1,25 @@
+:root {
+  --primary: #ffad00;
+  --black: #000000;
+  --green: #3ab434;
+  --red: #e71111;
+  --white: white;
+  --grey: #77838f;
+  --grey-light: #e5e5ea;
+  --border-color: #d1d1d6;
+  --border-radius: 8px;
+  --border-radius-large: 12px;
+  --background-color: #f2f2f7;
+  --primary-invert: var(--black);
+  --black-invert: var(--white);
+  --green-invert: var(--white);
+  --red-invert: var(--white);
+  --white-invert: var(--white);
+  --grey-invert: var(--white);
+  --grey-light-invert: var(--white);
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  --overlay-background: rgba(0, 0, 0, 0.5);
+  --offset: 0.75em 1.5em;
+}
+
+$colors: (primary, black, green, red, white, grey, grey-light);
