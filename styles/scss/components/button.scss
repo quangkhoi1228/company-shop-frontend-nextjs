@@ -11,6 +11,12 @@ $button-offset: 0.5rem 0.75rem;
   font-weight: bold;
   display: inline-flex;
   position: relative;
+  cursor: pointer;
+  @include animation;
+  &:hover,
+  &:active {
+    background: var(--grey);
+  }
 }
 
 .buttons {

@@ -10,6 +10,11 @@
     "styles": "postcss src/styles/scss/main.scss -o src/styles/css/styles.css"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
     "@next/font": "^13.0.0",
     "classnames": "^2.3.2",
     "next": "13.0.0",

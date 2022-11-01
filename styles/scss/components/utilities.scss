@@ -1,11 +1,15 @@
 $utility-range: 10;
-$utility-seperator: (none, 25, 5, 75);
+$utility-seperator: (none, 0.25, 0.5, 0.75);
 .has-shadow {
   box-shadow: var(--box-shadow);
 }
 
 .is-borderless {
   border: none !important;
+}
+
+.has-text-small {
+  font-size: 0.75rem;
 }
 
 @for $size from 0 to $utility-range {
@@ -21,11 +25,11 @@ $utility-seperator: (none, 25, 5, 75);
               #{$property}-#{$side}: -#{$size}#{$unit} !important;
             }
           } @else {
-            .has-#{$property}-#{$side}-#{$size}\.#{$seperator}#{$unit} {
-              #{$property}-#{$side}: calc(#{$size}#{$unit} + 0.#{$seperator}#{$unit}) !important;
+            .has-#{$property}-#{$side}-#{$size}\.#{$seperator* 100}#{$unit} {
+              #{$property}-#{$side}: calc(#{$size}#{$unit} + #{$seperator/10}#{$unit}) !important;
             }
-            .has-#{$property}-#{$side}--#{$size}\.#{$seperator}#{$unit} {
-              #{$property}-#{$side}: calc(-#{$size}#{$unit} - 0.#{$seperator}#{$unit}) !important;
+            .has-#{$property}-#{$side}--#{$size}\.#{$seperator* 100}#{$unit} {
+              #{$property}-#{$side}: calc(-#{$size}#{$unit} - #{$seperator / 10}#{$unit}) !important;
             }
           }
         }
