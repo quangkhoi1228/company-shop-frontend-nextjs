@@ -1,0 +1,21 @@
+.badge {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  background: var(--primary);
+  color: var(--primary-invert);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: var(--border-radius-rounded);
+  font-size: 0.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @each $color in $colors {
+    &.is-#{$color} {
+      background: var(--#{$color});
+      color: var(--#{$color}-invert);
+    }
+  }
+}

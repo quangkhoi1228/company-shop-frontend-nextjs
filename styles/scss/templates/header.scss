@@ -1,4 +1,54 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0.25rem 2rem;
+  .logo {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.search-bar {
+  width: 30.75rem;
+  display: flex;
+  position: relative;
+
+  .search-bar__icon {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--grey-dark);
+    height: 0.85rem;
+    img {
+      height: 100%;
+    }
+  }
+  .search-bar__input {
+    position: relative;
+    width: 100%;
+    background-color: var(--grey);
+    border: none;
+    padding: var(--offset);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: var(--border-radius-rounded);
+    font-size: 1rem;
+  }
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 2.25rem !important;
+    width: 2.25rem !important;
+    border-radius: var(--border-radius-rounded);
+  }
 }

@@ -1,0 +1,23 @@
+$button-border: 1px solid var(--blue);
+$button-color: var(--primary);
+$button-offset: 0.5rem 0.75rem;
+
+.button {
+  padding: $button-offset;
+  border: $button-border;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: $button-color;
+  font-weight: bold;
+  display: inline-flex;
+  position: relative;
+}
+
+.buttons {
+  display: block;
+  .button {
+    & + .button {
+      margin-left: 0.75em;
+    }
+  }
+}

@@ -1,14 +1,18 @@
 :root {
-  --primary: #ffad00;
+  --primary: #2264d1;
+  --text: #19191d;
   --black: #000000;
   --green: #3ab434;
   --red: #e71111;
+  --blue: #9dc2ff;
   --white: white;
-  --grey: #77838f;
+  --grey: #ededf0;
+  --grey-dark: #787885;
   --grey-light: #e5e5ea;
   --border-color: #d1d1d6;
-  --border-radius: 8px;
+  --border-radius: 4px;
   --border-radius-large: 12px;
+  --border-radius-rounded: 9999px;
   --background-color: #f2f2f7;
   --primary-invert: var(--black);
   --black-invert: var(--white);
@@ -17,9 +21,13 @@
   --white-invert: var(--white);
   --grey-invert: var(--white);
   --grey-light-invert: var(--white);
-  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+  --box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 0px 4px 8px rgba(41, 121, 255, 0.2);
   --overlay-background: rgba(0, 0, 0, 0.5);
   --offset: 0.75em 1.5em;
 }
 
 $colors: (primary, black, green, red, white, grey, grey-light);
+$colors-des: ((var(--primary),), var(--black));
+$properties: (padding, margin);
+$sides: (none, top, right, bottom, left);
+$units: (px, rem, em, \%);

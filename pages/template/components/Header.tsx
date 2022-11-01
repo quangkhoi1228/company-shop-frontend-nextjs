@@ -22,11 +22,16 @@ const Header = () => {
           <a href='' className='button'>
             Sign in
           </a>
-          <a href='' className='button'>
+          <a href='' className='button has-shadow is-borderless'>
             My cart
+            <span className='badge is-red'>5</span>
           </a>
         </div>
-        <img src='/images/header-avatar.svg' alt='' />
+        <img
+          className='has-padding-left-0.75rem'
+          src='/images/header-avatar.svg'
+          alt=''
+        />
       </div>
     </header>
   );

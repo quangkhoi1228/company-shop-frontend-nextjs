@@ -1,0 +1,35 @@
+$utility-range: 10;
+$utility-seperator: (none, 25, 5, 75);
+.has-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.is-borderless {
+  border: none !important;
+}
+
+@for $size from 0 to $utility-range {
+  @each $seperator in $utility-seperator {
+    @each $property in $properties {
+      @each $side in $sides {
+        @each $unit in $units {
+          @if $seperator == none {
+            .has-#{$property}-#{$side}-#{$size}#{$unit} {
+              #{$property}-#{$side}: #{$size}#{$unit} !important;
+            }
+            .has-#{$property}-#{$side}--#{$size}#{$unit} {
+              #{$property}-#{$side}: -#{$size}#{$unit} !important;
+            }
+          } @else {
+            .has-#{$property}-#{$side}-#{$size}\.#{$seperator}#{$unit} {
+              #{$property}-#{$side}: calc(#{$size}#{$unit} + 0.#{$seperator}#{$unit}) !important;
+            }
+            .has-#{$property}-#{$side}--#{$size}\.#{$seperator}#{$unit} {
+              #{$property}-#{$side}: calc(-#{$size}#{$unit} - 0.#{$seperator}#{$unit}) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
