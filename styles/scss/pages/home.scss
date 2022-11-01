@@ -1,0 +1,24 @@
+.categories-navbar {
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  .category {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    color: var(--grey-dark);
+    &.is-active {
+      color: var(--primary);
+    }
+
+    .category__icon {
+      margin-bottom: 0.25rem;
+      height: 1.25rem;
+    }
+    .category__name {
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}

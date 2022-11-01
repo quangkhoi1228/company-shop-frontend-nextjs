@@ -5,7 +5,7 @@
   height: 5rem;
   padding: 0.25rem 2rem;
   .logo {
-    width: 15vw;
+    width: 10vw;
     display: flex;
     justify-content: center;
   }
@@ -36,7 +36,6 @@
     border: none;
     padding: var(--offset);
     padding-left: 2.5rem;
-    padding-right: 2.5rem;
     border-radius: var(--border-radius-rounded);
     font-size: 1rem;
   }
