@@ -17,6 +17,10 @@ $button-font: var(--font-secondary);
   cursor: pointer;
   font-family: $button-font;
   @include animation;
+
+  &.is-fullwidth{
+    width: 100%;
+  }
   &:hover,
   &:active {
     background: var(--grey);
