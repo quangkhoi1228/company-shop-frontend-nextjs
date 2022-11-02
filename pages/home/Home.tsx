@@ -1,6 +1,7 @@
 import Template from '../template/Template';
 import CategoriesNavbar from './components/CategoriesNavbar';
 import ControlBar from './components/ControlBar/ControlBar';
+import ProductList from './components/ProductList/ProductList';
 
 const Home = () => {
   return (
@@ -12,10 +13,10 @@ const Home = () => {
           <section className='column'>
             <section className='home-product-list-container'>
               <ControlBar />
+              <ProductList />
             </section>
           </section>
         </div>
-        
       </div>
     </Template>
   );

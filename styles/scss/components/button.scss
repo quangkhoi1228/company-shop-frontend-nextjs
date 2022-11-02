@@ -11,6 +11,7 @@ $button-offset: 0.5rem 0.75rem;
   font-weight: bold;
   display: inline-flex;
   position: relative;
+  background-color: var(--white);
   cursor: pointer;
   @include animation;
   &:hover,

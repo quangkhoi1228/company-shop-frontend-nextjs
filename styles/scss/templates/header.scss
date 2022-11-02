@@ -4,6 +4,11 @@
   align-items: center;
   height: 5rem;
   padding: 0.25rem 2rem;
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+  // background: var(--white);
+  // z-index: 10;
   .logo {
     width: 10vw;
     display: flex;
@@ -12,7 +17,7 @@
 }
 
 .search-bar {
-  width: 30.75rem;
+  width: min(41.75rem, 40vw);
   display: flex;
   position: relative;
 
@@ -46,8 +51,8 @@
   align-items: center;
 
   img {
-    height: 2.25rem !important;
-    width: 2.25rem !important;
+    height: 2.75rem !important;
+    width: 2.75rem !important;
     border-radius: var(--border-radius-rounded);
   }
 }

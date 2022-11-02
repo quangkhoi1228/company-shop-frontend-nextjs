@@ -1,3 +1,5 @@
+$product-item-gap: 0.5rem;
+
 .categories-navbar {
   display: flex;
   justify-content: space-between;
@@ -6,7 +8,7 @@
   .category {
     display: block;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     padding: 0.25rem;
     color: var(--grey-dark);
     cursor: pointer;
@@ -21,7 +23,6 @@
       height: 1.25rem;
     }
     .category__name {
-      font-weight: 400;
       white-space: nowrap;
     }
   }
@@ -30,8 +31,97 @@
 .home-product-list-container {
   box-shadow: 0px 1px 2px rgba(58, 58, 68, 0.24), 0px 2px 4px rgba(90, 91, 106, 0.24);
   border-radius: var(--border-radius-large);
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .related-bar {
-  margin-top: 2rem;
+  margin: 2rem 0;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$product-item-gap;
+}
+
+.product-item {
+  width: calc(25% - $product-item-gap * 2);
+  padding: 1rem;
+  margin: $product-item-gap;
+  box-sizing: border-box;
+  .product__thumpnail {
+    width: 100%;
+  }
+
+  .product__name {
+    font-size: 1rem;
+    letter-spacing: 2.75%;
+  }
+
+  .product__price-info {
+    margin: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product__price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+  }
+  .product__tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--border-radius);
+    &.is-green {
+      background: var(--green-light);
+      color: var(--green);
+    }
+  }
+
+  .product__description {
+    margin: 0.5rem 0;
+    font-size: 0.875rem;
+    color: var(--grey-dark);
+  }
+
+  .product__meta {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button{
+    font-weight: normal;
+    font-size: 0.875rem;
+  }
+}
+
+.rating-star {
+  display: flex;
+  justify-content: start;
+  .stars {
+    display: flex;
+    align-items: center;
+    transform: translateY(-0.15rem);
+    .full-star,
+    .half-star {
+      width: 0.9rem;
+      height: 0.9rem;
+      background-repeat: no-repeat !important;
+    }
+    .full-star {
+      background: url("/images/star/full-star.svg");
+    }
+
+    .half-star {
+      transform: translate3d(0rem, 0.15rem, 0);
+
+      background: url("/images/star/half-star.svg");
+    }
+  }
+
+  .point {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+  }
 }
