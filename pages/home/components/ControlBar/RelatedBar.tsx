@@ -8,7 +8,7 @@ const RelatedBar = () => {
   return (
     <section className='related-bar'>
       <Stack direction='row' spacing={1} alignItems='center'>
-        <span className='has-text-small'>Related</span>
+        <span style={{ fontSize: '0.875rem' }}>Related</span>
         {relatedList.map((item: RelatedDataType) => {
           const isActive = item.code === 'worldwide-shipping';
           return (
@@ -19,6 +19,7 @@ const RelatedBar = () => {
                 cursor: 'pointer',
                 color: isActive ? 'white' : '#4A4B57',
                 backgroundColor: isActive ? '#9DC2FF' : '#EDEDF0',
+                fontSize: '0.875rem',
               }}
               label={item.name}
             />

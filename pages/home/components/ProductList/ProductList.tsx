@@ -16,9 +16,9 @@ export interface ProductDataType {
 const ProductList = () => {
   return (
     <section className='product-list'>
-      {productList.map((product: ProductDataType) => {
+      {productList.map((product: ProductDataType, index) => {
         return (
-          <article key={product.name} className='product-item'>
+          <article key={index} className='product-item'>
             <img
               className='product__thumpnail'
               src={product.thumbnail}

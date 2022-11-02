@@ -96,7 +96,6 @@ $product-item-gap: 0.5rem;
     align-items: center;
   }
   .button {
-    font-weight: normal;
     font-size: 0.875rem;
   }
 }
@@ -129,4 +128,8 @@ $product-item-gap: 0.5rem;
     margin-left: 0.5rem;
     font-size: 0.875rem;
   }
+}
+
+.filter-by-product {
+  margin: 2.875rem 0 2rem 0;
 }

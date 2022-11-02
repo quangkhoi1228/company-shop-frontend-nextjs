@@ -1,22 +1,43 @@
 $button-border: 1px solid var(--blue);
 $button-color: var(--primary);
-$button-offset: 0.5rem 0.75rem;
-
+$button-offset: 0.5em 0.75em;
+$button-font: var(--font-secondary);
 .button {
   padding: $button-offset;
   border: $button-border;
   border-radius: var(--border-radius);
   text-decoration: none;
   color: $button-color;
-  font-weight: bold;
+  font-weight: 600;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: var(--white);
   cursor: pointer;
+  font-family: $button-font;
   @include animation;
   &:hover,
   &:active {
     background: var(--grey);
+    opacity: 0.9;
+  }
+
+  .icon {
+    height: 1em;
+    position: relative;
+    & + .text {
+      margin: 0 1.25em;
+    }
+    svg{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.is-large {
+    font-size: 1.5rem;
   }
 }
 

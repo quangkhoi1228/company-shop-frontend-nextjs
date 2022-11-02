@@ -1,0 +1,82 @@
+$menu-description-color: var(--grey-dark);
+$menu-arrow-color: var(--primary);
+$active-menu-color: var(--primary);
+
+.menu {
+  padding-left: 0.5em;
+  * {
+    transition: all 0.25s linear;
+  }
+
+  .expand-button-container,
+  .show-more-button-container {
+    margin-left: 3em;
+    button {
+      background: var(--primary-light);
+      border: none;
+    }
+  }
+  .show-more-button-container{
+    margin: 0.25 0;
+    margin-left: 2em;
+    .icon{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.menu-item-container {
+  // padding: 0.35em;
+  &.has-submenu {
+    > .menu-item {
+      .menu-name {
+        font-weight: 500;
+      }
+    }
+    > .menu {
+      height: 0;
+      display: none;
+    }
+  }
+  &.is-active {
+    > .menu-item {
+      > .menu-arrow {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+    > .menu {
+      height: 100%;
+      display: block;
+    }
+  }
+  .menu-item {
+    padding: 0.625em 0 0.625em 2em;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      > .menu-name {
+        color: $active-menu-color;
+      }
+    }
+
+    .menu-name {
+      font-size: 1em;
+      font-weight: 300;
+    }
+    .menu-description {
+      color: $menu-description-color;
+      font-size: 0.875em;
+      margin-top: 0.25em;
+    }
+    .menu-arrow {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+      width: 1em;
+      height: 1em;
+      color: $menu-arrow-color;
+      animation: all 2s linear infinite;
+    }
+  }
+}

@@ -1,7 +1,12 @@
 html {
   font-size: 14px;
   font-family: var(--font-primary);
-  font-weight: 300
+  font-weight: 300;
 }
 
+body {
+  * {
+    @include animation;
+  }
+}
 @import "header.scss";

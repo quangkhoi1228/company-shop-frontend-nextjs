@@ -1,5 +1,6 @@
 :root {
   --primary: #2264d1;
+  --primary-light: #ecf2ff;
   --text: #19191d;
   --black: #000000;
   --green: #37833b;
@@ -28,6 +29,7 @@
   --overlay-background: rgba(0, 0, 0, 0.5);
   --offset: 0.75em 1.5em;
   --font-primary: "Inter", sans-serif;
+  --font-secondary: "Quicksand", sans-serif;
 }
 
 $colors: (primary, black, green, red, white, grey, grey-light);
