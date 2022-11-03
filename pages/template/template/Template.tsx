@@ -16,6 +16,7 @@ const Template = ({ children }: { children?: ReactNode }) => {
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700;800;900&display=swap'
           rel='stylesheet'
+          type='text/css'
         />
       </Head>
       <main>

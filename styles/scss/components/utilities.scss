@@ -47,3 +47,35 @@ $utility-seperator: (none, 0.25, 0.5, 0.75);
   z-index: 10;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-hidden-tablet {
+  display: block;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.is-hidden-desktop {
+  display: block;
+  @include desktop {
+    display: none !important;
+  }
+}
+.is-hidden-mobile {
+  display: block;
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.is-hidden-touch {
+  display: block;
+  @include touch {
+    display: none !important;
+  }
+}

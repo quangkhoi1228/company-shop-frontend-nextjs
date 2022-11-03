@@ -10,8 +10,8 @@ const Home = () => {
     <Template>
       <div className='container'>
         <CategoriesNavbar />
-        <div className='columns'>
-          <aside className='column is-3 is-4-tablet'>
+        <div className='columns is-multiline'>
+          <aside className='column is-3 is-4-tablet is-12-mobile home__aside-container'>
             <FilterSidebar />
           </aside>
           <section className='column is-8-tablet'>

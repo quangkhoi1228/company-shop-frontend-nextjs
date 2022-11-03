@@ -26,6 +26,10 @@ $button-font: var(--font-secondary);
     font-size: 0.875rem;
   }
 
+  &.is-normal {
+    font-size: 1rem;
+  }
+
   &.is-medium {
     font-size: 1.25rem;
   }
@@ -36,6 +40,31 @@ $button-font: var(--font-secondary);
 
   &.is-link {
     border: none;
+  }
+
+  &.is-outlined {
+    background: transparent;
+    border-color: var(--primary-invert);
+    color: var(--primary-invert);
+  }
+
+  &.is-icon {
+    padding: 0.75em;
+    width: 2.5em;
+    height: 2.5em;
+    .icon {
+      width: 1em;
+      height: 1em;
+      position: relative;
+      @include center;
+      svg {
+        @include center;
+      }
+    }
+  }
+
+  &.is-rounded {
+    border-radius: var(--border-radius-rounded);
   }
   &:hover,
   &:active {
@@ -55,8 +84,6 @@ $button-font: var(--font-secondary);
       transform: translateY(-50%);
     }
   }
-
-
 }
 
 .buttons {
@@ -65,5 +92,9 @@ $button-font: var(--font-secondary);
     & + .button {
       margin-left: 0.75em;
     }
+  }
+
+  &.is-mobile {
+    display: flex;
   }
 }

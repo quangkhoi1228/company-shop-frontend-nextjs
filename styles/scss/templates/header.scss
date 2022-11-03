@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem min(5%, 2rem);
   // position: sticky;
   // top: 0;
   // left: 0;
@@ -13,6 +13,18 @@
     width: 10vw;
     display: flex;
     justify-content: center;
+  }
+
+  @include mobile {
+    background: var(--primary);
+    .logo {
+      width: auto;
+      position: relative;
+      top: 0.5em;
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
   }
 }
 
@@ -51,8 +63,8 @@
   align-items: center;
 
   img {
-    height: 2.75rem !important;
-    width: 2.75rem !important;
+    height: 3.25rem !important;
+    width: 3.25rem !important;
     border-radius: var(--border-radius-rounded);
   }
 }

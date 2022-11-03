@@ -1,5 +1,6 @@
 import { CLS } from 'utils/utils';
 import RatingStar from './RatingStar';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export interface ProductDataType {
   name: string;
@@ -42,7 +43,12 @@ const ProductList = () => {
               />
               <div className='product__meta'>
                 <RatingStar point={product.vote} />
-                <button className='button'>Buy now</button>
+                <button className='button is-hidden-mobile'>Buy now</button>
+                <button className='button is-icon is-medium is-hidden-desktop is-hidden-tablet'>
+                  <span className='icon'>
+                    <FavoriteBorderIcon />
+                  </span>
+                </button>
               </div>
             </article>
           );

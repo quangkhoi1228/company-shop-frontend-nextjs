@@ -1,6 +1,7 @@
 :root {
   --primary: #2264d1;
   --primary-light: #ecf2ff;
+  --secondary: #F79A23;
   --text: #19191d;
   --black: #000000;
   --green: #37833b;
@@ -17,7 +18,7 @@
   --border-radius-large: 12px;
   --border-radius-rounded: 9999px;
   --background-color: #f2f2f7;
-  --primary-invert: var(--black);
+  --primary-invert: var(--white);
   --black-invert: var(--white);
   --green-invert: var(--white);
 
