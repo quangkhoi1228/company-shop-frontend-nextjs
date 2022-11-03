@@ -57,6 +57,7 @@ $product-item-gap: 0.5rem;
   @include mobile {
     box-shadow: none;
     padding: 0;
+    margin-bottom: 4rem;
   }
 }
 .related-bar {
@@ -179,8 +180,24 @@ $product-item-gap: 0.5rem;
 
 .filter-sidebar-mobile {
   display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  .float-action-button {
+    border: none;
+    background: var(--white);
+  }
+  .department-button {
+    background: var(--green-light);
+    color: var(--green);
+    border: none;
+  }
   @include mobile {
-    display: block;
+    display: flex;
   }
 }
 
@@ -262,5 +279,11 @@ $product-item-gap: 0.5rem;
     .shop-by-product__header {
       display: block !important ;
     }
+  }
+}
+
+.home__aside-container {
+  @include mobile {
+    padding: 0;
   }
 }

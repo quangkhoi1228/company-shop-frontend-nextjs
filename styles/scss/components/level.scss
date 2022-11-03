@@ -3,6 +3,13 @@ $level-item-spacing: var(--offset) !default;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &.is-mobile {
+    @include mobile {
+      .level-right {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .level-item {

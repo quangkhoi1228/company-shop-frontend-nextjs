@@ -14,7 +14,7 @@ const Home = () => {
           <aside className='column is-3 is-4-tablet is-12-mobile home__aside-container'>
             <FilterSidebar />
           </aside>
-          <section className='column is-8-tablet'>
+          <section className='column is-8-tablet is-12-mobile'>
             <section className='home-product-list-container'>
               <ControlBar />
               <ProductList />

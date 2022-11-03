@@ -1,7 +1,7 @@
 import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
-import Accordion from 'pages/template/components/Accordion';
 import Menu, { MenuItemDataType } from 'pages/template/components/Menu';
 import FilterByOption from './FilterByOption';
+import MenuIcon from '@mui/icons-material/Menu';
 import FilterByYear from './FilterByYear';
 const FilterSidebar = () => {
   return (
@@ -11,7 +11,7 @@ const FilterSidebar = () => {
           <span className='icon'>
             <FilterListRoundedIcon />
           </span>
-          <span className='text'> Departments</span>
+          <span className='text'>Departments</span>
         </button>
         <div className='filter-by-product'>
           <Menu data={menuData} hasExpandButton={true} />
@@ -23,7 +23,19 @@ const FilterSidebar = () => {
           <FilterByYear />
         </div>
       </aside>
-      <aside className='filter-sidebar-mobile'></aside>
+      <aside className='filter-sidebar-mobile'>
+        <button className='button float-action-button has-shadow is-icon  is-rounded  is-large  '>
+          <span className='icon'>
+            <MenuIcon />
+          </span>
+        </button>
+        <button className='button is-large is-rounded department-button is-green is-inverted'>
+          <span className='icon'>
+            <FilterListRoundedIcon />
+          </span>
+          <span className='text'>Categories</span>
+        </button>
+      </aside>
     </>
   );
 };

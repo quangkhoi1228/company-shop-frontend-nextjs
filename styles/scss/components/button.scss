@@ -84,6 +84,35 @@ $button-font: var(--font-secondary);
       transform: translateY(-50%);
     }
   }
+
+  @each $color in $colors {
+    &.is-#{$color} {
+      background: var(--#{$color});
+      color: var(--#{$color}-invert);
+      border-color: var(--#{$color});
+
+      &.is-light {
+        background: var(--#{$color}-light);
+        color: var(--#{$color});
+        border-color: var(--#{$color}-light);
+        &:hover,
+        &:active,
+        &.is-active {
+          background: var(--#{$color});
+          color: var(--#{$color}-invert);
+          border-color: var(--#{$color});
+        }
+      }
+
+      &:hover,
+      &:active,
+      &.is-active {
+        background: var(--#{$color}-light);
+        color: var(--#{$color});
+        border-color: var(--#{$color}-light);
+      }
+    }
+  }
 }
 
 .buttons {
