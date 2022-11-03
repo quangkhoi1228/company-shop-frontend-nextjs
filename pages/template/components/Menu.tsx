@@ -27,11 +27,10 @@ const Menu = ({
   return (
     <ul className='menu'>
       {data.map((menuItem: MenuItemDataType, index: number) => {
-        return (
-          maxChildrenShow &&
-          maxChildrenShow > index && (
-            <MenuItem key={menuItem.code} data={menuItem} />
-          )
+        return maxChildrenShow && maxChildrenShow > index ? (
+          <MenuItem key={menuItem.code} data={menuItem} />
+        ) : (
+          <li key={menuItem.code}></li>
         );
       })}
       {hasExpandButton && (
@@ -64,18 +63,18 @@ const MenuItem = ({ data }: { data: MenuItemDataType }) => {
         )}
         {data.children && <ChevronRightRoundedIcon className='menu-arrow' />}
       </div>
-      {data.children && <Menu data={data.children} parent={data}/>}
+      {data.children && <Menu data={data.children} parent={data} />}
       {data.maxChildrenShow &&
         data.children &&
         data.maxChildrenShow < data?.children?.length && (
-          <li className='show-more-button-container'>
+          <div className='show-more-button-container'>
             <button className='button'>
               <span className='text'>Show more</span>
               <span className='icon'>
                 <ChevronRightRoundedIcon />
               </span>
             </button>
-          </li>
+          </div>
         )}
     </li>
   );

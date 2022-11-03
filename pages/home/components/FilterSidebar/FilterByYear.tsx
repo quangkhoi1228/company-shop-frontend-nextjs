@@ -27,7 +27,7 @@ const FilterByYear = () => {
 
 const options: { label: string; value: string }[] = [...new Array(10)]
   .fill(2015, 0, 10)
-  .map((item, index) => ({ label: item + index, value: item + index }))
+  .map((item, index) => ({ label: (item + index).toString(), value: item + index }))
   .reverse();
 
 export default FilterByYear;

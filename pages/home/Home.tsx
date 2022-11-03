@@ -10,10 +10,10 @@ const Home = () => {
       <div className='container'>
         <CategoriesNavbar />
         <div className='columns'>
-          <aside className='column is-3'>
+          <aside className='column is-3 is-4-tablet'>
             <FilterSidebar />
           </aside>
-          <section className='column'>
+          <section className='column is-8-tablet'>
             <section className='home-product-list-container'>
               <ControlBar />
               <ProductList />

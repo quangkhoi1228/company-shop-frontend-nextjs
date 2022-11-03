@@ -2,4 +2,9 @@
   max-width: 1300px;
   padding: var(--offset);
   margin: auto;
+
+  @include tablet{
+    max-width: 100%;
+
+  }
 }
