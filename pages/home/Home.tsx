@@ -3,6 +3,7 @@ import CategoriesNavbar from './components/CategoriesNavbar';
 import ControlBar from './components/ControlBar/ControlBar';
 import FilterSidebar from './components/FilterSidebar/FilterSidebar';
 import ProductList from './components/ProductList/ProductList';
+import ShopByProduct from './components/ShopByProduct/ShopByProduct';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
           </section>
         </div>
       </div>
+      <ShopByProduct />
     </Template>
   );
 };

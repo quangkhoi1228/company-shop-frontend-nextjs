@@ -18,8 +18,24 @@ $button-font: var(--font-secondary);
   font-family: $button-font;
   @include animation;
 
-  &.is-fullwidth{
+  &.is-large {
+    font-size: 1.5rem;
+  }
+
+  &.is-small {
+    font-size: 0.875rem;
+  }
+
+  &.is-medium {
+    font-size: 1.25rem;
+  }
+
+  &.is-fullwidth {
     width: 100%;
+  }
+
+  &.is-link {
+    border: none;
   }
   &:hover,
   &:active {
@@ -33,16 +49,14 @@ $button-font: var(--font-secondary);
     & + .text {
       margin: 0 1.25em;
     }
-    svg{
+    svg {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
     }
   }
 
-  &.is-large {
-    font-size: 1.5rem;
-  }
+
 }
 
 .buttons {

@@ -37,3 +37,13 @@ $utility-seperator: (none, 0.25, 0.5, 0.75);
     }
   }
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
