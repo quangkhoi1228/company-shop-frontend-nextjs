@@ -1,9 +1,6 @@
 import { Chip, Stack } from '@mui/material';
+import { RelatedDataType } from 'types/RelatedDataType';
 
-export interface RelatedDataType {
-  name: string;
-  code: string;
-}
 const RelatedBar = () => {
   return (
     <section className='related-bar'>

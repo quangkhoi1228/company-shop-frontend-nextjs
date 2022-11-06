@@ -4,8 +4,12 @@ import ControlBar from './components/ControlBar/ControlBar';
 import FilterSidebar from './components/FilterSidebar/FilterSidebar';
 import ProductList from './components/ProductList/ProductList';
 import ShopByProduct from './components/ShopByProduct/ShopByProduct';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'pages/_app';
 
 const Home = () => {
+  const state = useSelector((state: RootState) => state);
+  console.log(state);
   return (
     <Template>
       <div className='container'>

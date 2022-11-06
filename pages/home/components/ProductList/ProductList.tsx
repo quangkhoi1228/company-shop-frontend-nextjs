@@ -1,18 +1,7 @@
 import { CLS } from 'utils/utils';
 import RatingStar from './RatingStar';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
-export interface ProductDataType {
-  name: string;
-  descriptions: string;
-  tag?: { content: string; color: string };
-  category: string[];
-  price: number;
-  vote: number;
-  createAt: string;
-  yearOfMnufacture: string;
-  thumbnail: string;
-}
+import { ProductDataType } from 'types/ProductDataType';
 
 const ProductList = () => {
   return (

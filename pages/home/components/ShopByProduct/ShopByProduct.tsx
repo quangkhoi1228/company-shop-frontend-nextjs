@@ -1,11 +1,4 @@
-export interface ShopByProductDataType {
-  name: string;
-  icon: string;
-  products: {
-    code: string;
-    name: string;
-  }[];
-}
+import { ShopByProductDataType } from 'types/ShopByProductDataType';
 
 const ShopByProduct = () => {
   return (
@@ -18,8 +11,11 @@ const ShopByProduct = () => {
         </header>
         <section className='shop-by-product__body'>
           <div className='columns is-multiline'>
-            {shopByProductData.map((item: ShopByProductDataType) => (
-              <div key={item.name} className='column is-3 is-4-tablet is-12-mobile'>
+            {shopByProductData.map((item: ShopByProductDataType, index) => (
+              <div
+                key={item.name + index}
+                className='column is-3 is-4-tablet is-12-mobile'
+              >
                 <article className='product-menu '>
                   <header className='product-menu__header'>
                     <span className='product-menu__icon'>

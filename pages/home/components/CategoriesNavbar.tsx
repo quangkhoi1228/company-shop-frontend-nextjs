@@ -1,3 +1,4 @@
+import { CategoryDataType } from 'types/CategoryDataType';
 import { CLS } from 'utils/utils';
 
 const CategoriesNavbar = () => {
@@ -28,12 +29,6 @@ const CategoriesNavbar = () => {
     </nav>
   );
 };
-
-export interface CategoryDataType {
-  name: string;
-  icon: string;
-  code: string;
-}
 
 export const categoriesList: CategoryDataType[] = [
   {
