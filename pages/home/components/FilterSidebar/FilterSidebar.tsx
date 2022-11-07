@@ -3,11 +3,29 @@ import Menu, { MenuItemDataType } from 'pages/template/components/Menu';
 import FilterByOption from './FilterByOption';
 import MenuIcon from '@mui/icons-material/Menu';
 import FilterByYear from './FilterByYear';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { OPEN_SHOP_BY_PRODUCT } from 'redux/actions/shopByProductAction';
+import { RootState } from 'pages/_app';
 const FilterSidebar = () => {
+  const dispatch = useDispatch();
+  const { shopByProduct } = useSelector((state: RootState) => state);
+
+  useEffect(() => {
+    console.log(shopByProduct);
+  }, [shopByProduct]);
+
   return (
     <>
       <aside className='filter-sidebar'>
-        <button className='button is-large department-button is-fullwidth'>
+        <button
+          className='button is-large department-button is-fullwidth'
+          onClick={() => {
+            dispatch({
+              type: OPEN_SHOP_BY_PRODUCT,
+            });
+          }}
+        >
           <span className='icon'>
             <FilterListRoundedIcon />
           </span>

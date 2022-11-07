@@ -1,9 +1,26 @@
+import { CLS } from '@utils/utils';
+import { RootState } from 'pages/_app';
+import { useDispatch, useSelector } from 'react-redux';
+import { CLOSE_SHOP_BY_PRODUCT } from 'redux/actions/shopByProductAction';
 import { ShopByProductDataType } from 'types/ShopByProductDataType';
 
 const ShopByProduct = () => {
+  const dispatch = useDispatch();
+  const { shopByProduct } = useSelector((state: RootState) => state);
   return (
-    <section className='shop-by-product'>
-      <div className='overlay'></div>
+    <section
+      className={CLS('shop-by-product', {
+        'is-active': shopByProduct.isActive,
+      })}
+    >
+      <div
+        className='overlay'
+        onClick={() =>
+          dispatch({
+            type: CLOSE_SHOP_BY_PRODUCT,
+          })
+        }
+      />
       <div className='shop-by-product__content'>
         <header className='shop-by-product__header'>
           <span className='title'>Shop by product</span>

@@ -1,23 +1,35 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import { ReactElement, ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 // import { Inter } from '@next/font/google';
 // const inter = Inter();
-import Head from 'next/head';
+import { useSelector } from 'react-redux';
 import Header from './components/Header';
+import Head from 'next/head';
+import { RootState } from 'pages/_app';
 
 const Template = ({ children }: { children?: ReactNode }) => {
+  // document handle
+  const { documentState } = useSelector((state: RootState) => {
+    return {
+      documentState: state.document,
+    };
+  });
+
+  useEffect(() => {
+    if (documentState.scrollable) {
+      document.body.classList.add('is-scrollable');
+      document.body.classList.remove('is-clipped');
+    } else {
+      document.body.classList.remove('is-scrollable');
+      document.body.classList.add('is-clipped');
+    }
+  }, [documentState]);
+
   return (
     <>
       <Head>
         <title>Company Shop</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700;800;900&display=swap'
-          rel='stylesheet'
-          type='text/css'
-        />
       </Head>
       <main>
         <Header />

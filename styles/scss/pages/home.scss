@@ -217,7 +217,7 @@ $product-item-gap: 0.5rem;
   display: none;
 
   &.is-active {
-    display: block;
+    display: flex;
   }
 
   .shop-by-product__content {

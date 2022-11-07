@@ -79,3 +79,11 @@ $utility-seperator: (none, 0.25, 0.5, 0.75);
     display: none !important;
   }
 }
+
+.is-clipped {
+  overflow: hidden;
+}
+
+.is-scrollable {
+  overflow: auto;
+}
